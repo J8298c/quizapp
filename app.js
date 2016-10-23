@@ -60,11 +60,22 @@ function nextQuestion(){
     i++
     if(i <= Model.questions.length -1){
       displayTest();
+      checkAnswer();
+        $('input').prop("checked", false);
     } else {
       alert("The game has ended your score is " + score);
       i = 0;
     }
-  })
+  });
+
+  function checkAnswer(){
+      if($('input').prop('id')[i] === Model.questions[i].correctChoice) {
+        console.log('correctChoice');
+      } else {
+        alert('wrong')
+      }
+  };
+
 }
 
 runGame();

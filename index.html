@@ -12,11 +12,26 @@
       <button type="button" class="start" name="button">Start</button>
     </div>
     <div class="container">
-      <div class="question"></div>
-      <div class="choices"></div>
-      <div class="answerbox"><input type="text" name="name" placeholder="Enter your answer here"></div>
-      <button type="button" class="nextquestion" name="button">Next Question</button>
-    </div>
+      <form class="" action="index.html" method="post">
+        <fieldset>
+          <!--legend-->
+          <legend class="question"></legend>
+          <!-- <div class="question"></div> -->
+          <input id="answerA" type="radio" name="choice" value="a">
+          <label for="answerA" class="choices"></label>
+          <input id="answerB" type="radio" name="choice" value="b">
+          <label for="answerB" class="choices"></label>
+          <input id="answerC" type="radio" name="choice" value="c">
+          <label for="answerC" class="choices"></label>
+          <input id="answerD" type="radio" name="choice" value="d">
+          <label for="answerD" class="choices"></label>
+          <!-- <div class="choices"></div> -->
+          <!-- <div class="answerbox"><input type="text" name="name" placeholder="Enter your answer here"></div> -->
+        </fieldset>
+        <button type="button" class="nextquestion" name="button">Next Question</button>
+      </form>
+      </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="app.js" charset="utf-8"></script>
   </body>

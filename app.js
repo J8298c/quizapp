@@ -26,7 +26,23 @@ questions : [
     text: "During the early days of castlevania this family was cursed, and needed to defeat Dracula to lift the curse?",
     choices: ["Simon", "Van Helsing", "Belmont", "El Pope"],
     correctChoice: "c"
-  },
+  }, {
+    text: "What was the code to gain 30 lives in Contra?",
+    choices: ["Up Up Down Down Left Up Down", 'Up Up Down Down Left Right Left Right', "Down Down Up Left Right", "Up Up Left Right Left Right"],
+    correctChoice: "b"
+  }, {
+    text: "Super Mario Brothers 3 was accompanied by a special accessory what was that accessory?",
+    choices: ["Nintendo Cube", "Mario's Raccon Tail", "Fred Savage", "Power Glove"],
+    correctChoice: 'd'
+  }, {
+    text: "In the game Bad Dudes the two brothers had a saying do you know what it was?",
+    choices: ["I want to rock and roll", 'Cowabunga', 'Whos Bad', 'We got this'],
+    correctChoice: 'c'
+  }, {
+    text: "In kung-fu what sound effect would occur if the player died?",
+    choices: ["Signing everyone was kung-fu fighting", 'Sinster laugh', 'Sound of martial artist', 'Micheal Jacksons beat it'],
+    correctChoice: 'b'
+  }
 ]
 }
 
@@ -66,7 +82,7 @@ function nextQuestion(){
     } else {
       alert("The game has ended your score is " + score);
       i = 0;
-      resetGame(startGame());
+      resetGame();
     }
   });
 
@@ -79,7 +95,6 @@ function nextQuestion(){
        score +=1;
        qCount += 1;
      } else {
-       alert('wrong')
        qCount +=1;
      }
  };
@@ -87,8 +102,8 @@ function nextQuestion(){
     $('.test').css('display', 'none');
     $('body').append('<button class="reset">Reset</button> ');
     $('.reset').on('click', function(){
-      $('.startScreen').css('display', 'block');
       startGame();
+      runGame();
     })
   }
 }

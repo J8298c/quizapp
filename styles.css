@@ -28,3 +28,20 @@ li {
   display: block;
   float: left;
 }
+.gamepics {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+.player-score {
+  color: rgba(47, 105, 218, 0.57);
+  font-size: 75px;
+  margin: auto auto;
+}
+.reset {
+  margin: 0 auto;
+  color: white;
+  background-color: rgba(47, 105, 218, 0.57);
+}
